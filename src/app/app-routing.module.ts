@@ -9,13 +9,13 @@ import { MerchComponent } from './merch/merch.component';
 import { SponsorComponent } from './sponsor/sponsor.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'events', component: EventsComponent},
-  {path: 'membership', component: MembershipComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'sponsor', component: SponsorComponent},
-  {path: 'merch', component: MerchComponent},
+  {path: 'home', title:'CUSA Home', component: HomeComponent},
+  {path: 'about', title:'About', component: AboutComponent},
+  {path: 'events', title:'Events', component: EventsComponent},
+  {path: 'membership', title:'Membership', component: MembershipComponent},
+  {path: 'contact', title:'Contact', component: ContactComponent},
+  {path: 'sponsor', title:'For Sponsors', component: SponsorComponent},
+  {path: 'merch', title:'Merch', component: MerchComponent},
   {path: '',   redirectTo: '/home', pathMatch: 'full' },
   {path: '**', redirectTo: "/home"}
 ];
