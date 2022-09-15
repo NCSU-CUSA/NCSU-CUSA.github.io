@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { EventsComponent } from './events/events.component';
 import { MembershipComponent } from './membership/membership.component';
+import { ContactComponent } from './contact/contact.component';
+import { SponsorComponent } from './sponsor/sponsor.component';
+import { MerchComponent } from './merch/merch.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { MembershipComponent } from './membership/membership.component';
     HomeComponent,
     AboutComponent,
     EventsComponent,
-    MembershipComponent
+    MembershipComponent,
+    ContactComponent,
+    SponsorComponent,
+    MerchComponent
   ],
   imports: [
     BrowserModule,
