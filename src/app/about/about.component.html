@@ -7,154 +7,17 @@
 </p>
 <hr/>
 <h1 class="text-center py-4">2022-2023 Board Members</h1>
-<div class="container">
-    <div class="row my-3">
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-03.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">President:<br/>Peter Zheng</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-05.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Internal Vice President:<br/>Evelyn Li</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>   
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-06.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">External Vice President:<br/>Maggie Yang</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>    
-        </div>
-    </div>
 
-    <div class="row my-3">
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-02.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Secretary:<br/>Bethany Lee</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/member10.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Treasurer:<br/>Mandy Zhang</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>   
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-04.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Social Chair:<br/>Griffin Bish</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>    
+<div class="container" *ngIf="board">
+  <div class="row my-3" *ngFor="let row of board">
+    <div class="col" *ngFor="let card of row">
+      <div class="card mx-auto" style="width: 18rem;">
+          <img src={{card.Picture}} class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{card.Position}}<hr/>{{card.Name}}</h5>
+          </div>
         </div>
     </div>
+  </div>
 
-    <div class="row my-3">
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/mem9.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Event Chair:<br/>Adrian Chan</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-08.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Event Chair:<br/>Amy Guo</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>   
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Mem1.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Event Chair:<br/>Tracy Jiang</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>    
-        </div>
-    </div>
-
-    <div class="row my-3">
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-07.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Historian:<br/>Bethany Thai</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-11.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Design Chair:<br/>Andy Li</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>   
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/mem12.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">PR Chair:<br/>Ashley Li</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>    
-        </div>
-    </div>
-
-    <div class="row my-3">
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-03.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Freshman Rep:<br/>Unknown</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-03.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Freshman Rep:<br/>Unknown</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>   
-        </div>
-        <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="/assets/Members-03.png" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Freshman Rep:<br/>Unknown</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>    
-        </div>
-    </div>
 </div>

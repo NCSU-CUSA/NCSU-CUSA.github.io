@@ -10,6 +10,8 @@ import { MembershipComponent } from './membership/membership.component';
 import { ContactComponent } from './contact/contact.component';
 import { SponsorComponent } from './sponsor/sponsor.component';
 import { MerchComponent } from './merch/merch.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MerchComponent } from './merch/merch.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
