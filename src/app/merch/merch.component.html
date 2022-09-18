@@ -3,10 +3,10 @@
 </div>
 
 <div class="container my-5" *ngIf="store">
-    <div class="row" *ngFor="let row of store">
-        <div class="col" *ngFor="let card of row">
+    <div class="row" *ngFor="let row of store; let i = index">
+        <div class="col" *ngFor="let card of row; let j = index">
             <div class="card mx-auto my-3" style="width: 18rem;">
-                <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                <div id="carousel{{(i*3) + j}}" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active" *ngFor="let picture of card.Picture | slice:0:1">
                         <img src={{picture}} class="d-block w-100" alt="">
@@ -15,11 +15,11 @@
                         <img src={{picture}} class="d-block w-100" alt="">
                       </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carousel' + ((i*3) + j)" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carousel' + ((i*3) + j)" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
