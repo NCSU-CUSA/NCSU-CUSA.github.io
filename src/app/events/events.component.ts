@@ -23,6 +23,7 @@ export class EventsComponent implements OnInit {
   getEvents() {
     this.databaseService.getEvents().subscribe({
       next: res => {
+        console.log(res)
         const eventArray:string[] = res.split("\n");
         const headers = eventArray.shift()?.replace("\r","").split(",");
 
@@ -45,6 +46,7 @@ export class EventsComponent implements OnInit {
               });
               eventInfo[headers![i]] = out;
             } else if (headers![i] === "Upcoming") {
+              console.log(eventInfoArray)
               if (eventInfoArray[i] === "TRUE") {
                 eventInfo[headers![i]] = true;
               } else {
