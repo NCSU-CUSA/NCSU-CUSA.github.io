@@ -12,6 +12,7 @@ import { SponsorComponent } from './sponsor/sponsor.component';
 import { MerchComponent } from './merch/merch.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LnyComponent } from './lny/lny.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     MembershipComponent,
     ContactComponent,
     SponsorComponent,
-    MerchComponent
+    MerchComponent,
+    LnyComponent
   ],
   imports: [
     BrowserModule,
