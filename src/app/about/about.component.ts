@@ -14,19 +14,34 @@ export class AboutComponent implements OnInit {
 
   constructor(private databaseService: DatabaseService) { }
 
+  about:string = "";
+  year:string = ""
+
   ngOnInit(): void {
     this.getBoard();
+    this.getBasicInfo();
+  }
+
+  getBasicInfo() {
+    this.databaseService.getBasicInfo().subscribe({
+      next: res => {
+        const info:string[] = res.split("\n");
+        this.year = info[0].split("\t")[1]
+        this.about = info[1].split("\t")[1]
+      },
+      error: res => {}
+    })
   }
 
   getBoard() {
     this.databaseService.getBoard().subscribe({
       next: res => {
         const boardArray:string[] = res.split("\n");
-        const headers = boardArray.shift()?.replace("\r","").split(",");
+        const headers = boardArray.shift()?.replace("\r","").split("\t");
         boardArray.forEach(element => {
           const boardMember = element.replace("\r", "");
           const member:any = {}
-          const memberArray = boardMember.split(",");
+          const memberArray = boardMember.split("\t");
 
           for (let i = 0; i < headers?.length!; i++) {
             if (headers![i] === "Picture") {

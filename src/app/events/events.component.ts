@@ -23,15 +23,15 @@ export class EventsComponent implements OnInit {
   getEvents() {
     this.databaseService.getEvents().subscribe({
       next: res => {
-        console.log(res)
-        const eventArray:string[] = res.split("\n");
-        const headers = eventArray.shift()?.replace("\r","").split(",");
+        const eventArray:string[] = res.split("\n")
+
+        const headers = eventArray.shift()?.replace("\r","").split("\t");
 
         eventArray.forEach(element => {
           let id = 0;
           const event = element.replace("\r", "");
           const eventInfo:any = {}
-          const eventInfoArray = event.split(",");
+          const eventInfoArray = event.split("\t");
 
           for (let i = 0; i < headers?.length!; i++) {
             if (headers![i] === "Picture") {
@@ -46,7 +46,6 @@ export class EventsComponent implements OnInit {
               });
               eventInfo[headers![i]] = out;
             } else if (headers![i] === "Upcoming") {
-              console.log(eventInfoArray)
               if (eventInfoArray[i] === "TRUE") {
                 eventInfo[headers![i]] = true;
               } else {

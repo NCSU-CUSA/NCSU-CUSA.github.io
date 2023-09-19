@@ -14,18 +14,19 @@ export class DatabaseService {
   }
 
   getBoard():Observable<any> {
-    const boardUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSlACCVY3mvuDoYu4iY_A719KLTV0v548pHdsJE9YX8Vx9zZUgc_ZQEikEH9L826_jjMwRu8QQalDaF/pub?gid=1309853685&single=true&output=csv"
+    const boardUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSlACCVY3mvuDoYu4iY_A719KLTV0v548pHdsJE9YX8Vx9zZUgc_ZQEikEH9L826_jjMwRu8QQalDaF/pub?gid=1309853685&single=true&output=tsv"
     return this.http.get(boardUrl, {responseType: 'text'});
   }
 
   getEvents():Observable<any> {
-    const eventUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSlACCVY3mvuDoYu4iY_A719KLTV0v548pHdsJE9YX8Vx9zZUgc_ZQEikEH9L826_jjMwRu8QQalDaF/pub?gid=402719465&single=true&output=csv"
+    const eventUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSlACCVY3mvuDoYu4iY_A719KLTV0v548pHdsJE9YX8Vx9zZUgc_ZQEikEH9L826_jjMwRu8QQalDaF/pub?gid=402719465&single=true&output=tsv"
     return this.http.get(eventUrl, {responseType: 'text'});
 
   }
 
   getBasicInfo():Observable<any> {
-    const infoUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSlACCVY3mvuDoYu4iY_A719KLTV0v548pHdsJE9YX8Vx9zZUgc_ZQEikEH9L826_jjMwRu8QQalDaF/pub?gid=1934512044&single=true&output=csv"
+    const infoUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSlACCVY3mvuDoYu4iY_A719KLTV0v548pHdsJE9YX8Vx9zZUgc_ZQEikEH9L826_jjMwRu8QQalDaF/pub?gid=1934512044&single=true&output=tsv"
+    
     return this.http.get(infoUrl, {responseType: 'text'})
   }
 

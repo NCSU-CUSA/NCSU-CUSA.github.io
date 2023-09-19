@@ -13,7 +13,7 @@
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-            CUSA members get free admission into our 2 big events of they year, Mid-Autumn and Lunar New Year. They will get a discount when we have fundraisers/sell stuff. In addition to those benefits, there might also be free stuff that we give out throughout the year, for example, last year during our bake sale fundraiser, members were given a free lemon cake cookie.
+          {{benefits}}
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-            CUSA Memberships are <strong>$7 for the semester</strong> and <strong>$10 for the year</strong>. We accept payments through Venmo (@ncstate-cusa) or cash. If you are interested in getting a CUSA Membership please fill out the form below with your chosen payment method!
+            CUSA Memberships are <strong>${{semester}} for the semester</strong> and <strong>${{year}} for the year</strong>. We accept payments through Venmo (@ncstate-cusa) or cash. If you are interested in getting a CUSA Membership please fill out the form below with your chosen payment method!
         </div>
       </div>
     </div>
@@ -43,5 +43,6 @@
     </div>
   </div>
   <div class="container mx-auto mt-3 text-center">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfoaTFZzUyApP4KI_bcPY_CN_22AW7u7_of2rShhYBGOayuOg/viewform?embedded=true" width="640" height="830" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    Interested in a membership? Fill out the form below:
+    <a href={{membership}} target="_blank">{{membership}}</a>
   </div>
