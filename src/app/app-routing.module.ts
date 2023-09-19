@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'contact', title:'Contact', component: ContactComponent},
   {path: 'sponsor', title:'For Sponsors', component: SponsorComponent},
   {path: 'merch', title:'Merch', component: MerchComponent},
-  {path: 'lny', title: "LNY", component: LnyComponent},
+  // {path: 'lny', title: "LNY", component: LnyComponent},
   {path: '',   redirectTo: '/home', pathMatch: 'full' },
   {path: '**', redirectTo: "/home"}
 ];
