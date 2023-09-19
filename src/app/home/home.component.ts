@@ -10,6 +10,15 @@ export class HomeComponent implements OnInit {
 
   constructor(private databaseService: DatabaseService) {}
 
+  basicInfo:string[][] = [];
   ngOnInit(): void {}
 
+  getBoard() {
+    this.databaseService.getBoard().subscribe({
+      next: res => {
+        console.log(res)
+      },
+      error: res => {}
+    })
+  }
 }
